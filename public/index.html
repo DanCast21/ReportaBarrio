@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio · ReportaBarrio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="encabezado-interior">
+      <a class="logo" href="/"><img src="img/logo.svg" alt="" width="36" height="36"><span>ReportaBarrio</span></a>
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="/" class="activo" aria-current="page">Inicio</a>
+        <a href="/reportar.html">Reportar</a>
+        <a href="/reportes">Reportes</a>
+        <a href="/estadisticas">Estadísticas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="contenedor hero-interior">
+        <h1 id="titulo-hero">Tu voz transforma <span>tu vecindario</span></h1>
+        <p class="hero-texto">Reporta huecos, basuras, luminarias dañadas o fugas de agua. Con un registro claro, la comunidad puede priorizar y las autoridades pueden actuar.</p>
+        <div class="hero-botones">
+          <a class="boton" href="/reportar.html">Reportar un problema</a>
+          <a class="boton boton-secundario" href="/reportes">Explorar reportes</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion-ods">
+      <div class="contenedor">
+        <div class="ods-encabezado">
+          <div class="ods-sello"><strong>11</strong><span>ODS</span></div>
+          <div>
+            <h2>ODS 11: Ciudades y comunidades sostenibles</h2>
+            <p>El ODS 11 busca ciudades y asentamientos humanos inclusivos, seguros, resilientes y sostenibles. ReportaBarrio aporta una herramienta sencilla para que los vecinos reporten, consulten y filtren los problemas de su barrio.</p>
+          </div>
+        </div>
+        <div class="cuadricula-tarjetas">
+          <article class="tarjeta">
+            <span class="etiqueta">Meta 11.1</span>
+            <h3>Acceso a servicios básicos</h3>
+            <p>Los reportes de agua, alcantarillado y alumbrado ayudan a detectar fallas en servicios esenciales de cada barrio.</p>
+          </article>
+          <article class="tarjeta">
+            <span class="etiqueta">Meta 11.3</span>
+            <h3>Urbanización participativa</h3>
+            <p>Los vecinos participan en la gestión de su entorno y dejan un registro que sirve para priorizar intervenciones.</p>
+          </article>
+          <article class="tarjeta">
+            <span class="etiqueta">Meta 11.6</span>
+            <h3>Reducir el impacto ambiental</h3>
+            <p>Reportar basuras acumuladas y zonas verdes deterioradas ayuda a mejorar la gestión de residuos y el espacio público.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contenedor seccion">
+      <h2>¿Qué puedes reportar?</h2>
+      <ul class="categorias">
+        <li><a href="/reportes?categoria=vias">Vías y huecos</a></li>
+        <li><a href="/reportes?categoria=alumbrado">Alumbrado público</a></li>
+        <li><a href="/reportes?categoria=residuos">Residuos y basuras</a></li>
+        <li><a href="/reportes?categoria=agua">Agua y alcantarillado</a></li>
+        <li><a href="/reportes?categoria=espacio-publico">Espacio público y zonas verdes</a></li>
+        <li><a href="/reportes?categoria=seguridad-vial">Seguridad vial</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-interior">
+      <p><strong>ReportaBarrio</strong> · Proyecto de aula de Tecnologías Web · ODS 11</p>
+    </div>
+  </footer>
+</body>
+</html>

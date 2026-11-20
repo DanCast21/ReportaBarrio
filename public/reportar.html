@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportar · ReportaBarrio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="encabezado-interior">
+      <a class="logo" href="/"><img src="img/logo.svg" alt="" width="36" height="36"><span>ReportaBarrio</span></a>
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/reportar.html" class="activo" aria-current="page">Reportar</a>
+        <a href="/reportes">Reportes</a>
+        <a href="/estadisticas">Estadísticas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="cabecera-pagina">
+      <div class="contenedor">
+        <h1>Nuevo reporte ciudadano</h1>
+        <p>Los campos marcados con * son obligatorios.</p>
+      </div>
+    </section>
+
+    <section class="contenedor diseno-formulario">
+      <form id="formulario-reporte" class="formulario" action="/reportes" method="POST">
+        <fieldset>
+          <legend>1. Detalle del problema</legend>
+
+          <div class="campo">
+            <label for="titulo">Título del problema *</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Ej. Hueco profundo frente a la parada de bus" maxlength="100" required>
+          </div>
+
+          <div class="fila-campos">
+            <div class="campo">
+              <label for="categoria">Categoría *</label>
+              <select id="categoria" name="categoria" required>
+                <option value="">Selecciona una categoría...</option>
+                <option value="vias">Vías y huecos</option>
+                <option value="alumbrado">Alumbrado público</option>
+                <option value="residuos">Residuos y basuras</option>
+                <option value="agua">Agua y alcantarillado</option>
+                <option value="espacio-publico">Espacio público y zonas verdes</option>
+                <option value="seguridad-vial">Seguridad vial</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="barrio">Barrio *</label>
+              <select id="barrio" name="barrio" required>
+                <option value="">Selecciona tu barrio...</option>
+                <option value="Centro">Centro</option>
+                <option value="El Prado">El Prado</option>
+                <option value="Boston">Boston</option>
+                <option value="Riomar">Recreo</option>
+                <option value="Barrio Abajo">Barrio Abajo</option>
+                <option value="Ciudad Jardín">Las nieves</option>
+                <option value="Rebolo">Rebolo</option>
+                <option value="Simón Bolívar">Simón Bolívar</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="descripcion">Descripción detallada *</label>
+            <textarea id="descripcion" name="descripcion" rows="5" maxlength="400" placeholder="Explica qué ocurre y da puntos de referencia cercanos (ej. frente a la panadería)." required></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Nivel de urgencia *</legend>
+          <div class="opciones-urgencia">
+            <label class="opcion-urgencia opcion-baja">
+              <input type="radio" name="urgencia" value="baja" required>
+              <strong>Baja</strong>
+              <span>No impide el paso ni es un peligro inmediato.</span>
+            </label>
+            <label class="opcion-urgencia opcion-media">
+              <input type="radio" name="urgencia" value="media" required>
+              <strong>Media</strong>
+              <span>Genera molestia continua o dificultad de tránsito.</span>
+            </label>
+            <label class="opcion-urgencia opcion-alta">
+              <input type="radio" name="urgencia" value="alta" required>
+              <strong>Alta</strong>
+              <span>Riesgo directo para peatones, ciclistas o conductores.</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Contacto</legend>
+          <div class="campo">
+            <label for="contacto">Correo electrónico o teléfono *</label>
+            <input type="text" id="contacto" name="contacto" placeholder="correo@ejemplo.com o 3001234567" required>
+          </div>
+        </fieldset>
+
+        <div class="acciones-formulario">
+          <button type="submit" class="boton">Enviar reporte</button>
+        </div>
+      </form>
+
+      <aside class="panel panel-guia">
+        <h2>Para un buen reporte</h2>
+        <ul>
+          <li>Indica cruces de calles o lugares conocidos.</li>
+          <li>Describe los hechos sin señalar a personas.</li>
+          <li>Revisa en <a href="/reportes">Reportes</a> si ya fue reportado.</li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-interior">
+      <p><strong>ReportaBarrio</strong> · Proyecto de aula de Tecnologías Web · ODS 11</p>
+    </div>
+  </footer>
+</body>
+</html>
